@@ -14,17 +14,20 @@ function ProductPage() {
                 </Grid.Column>
                 <Grid.Column width={4}>
                     <div>
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="nav nav-tabs">
                             <li className="nav-item">
-                                <NavLink to='primary'  >primary</NavLink>
+                                <NavLink to='primary' className="nav-link" >Product</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to='secondary'  >secondary</NavLink>
+                                <NavLink to='secondary' className="nav-link " >secondary</NavLink>
                             </li>
                         </ul>
                     </div>
                 </Grid.Column>
-                <Grid.Column width={3}>
+
+            </Grid.Row>
+            <Grid.Row>
+                <Grid.Column width={12}>
                     <Outlet />
                 </Grid.Column>
             </Grid.Row>

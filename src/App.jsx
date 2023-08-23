@@ -62,14 +62,14 @@ function App() {
       <div className="container height" >
         <AuthProvider>
           <HeaderPage />
-          <Routes>
+          <Routes basename="/login">
             <Route path='/' element={<Homepage />} />
             <Route path='about' element={
               <React.Suspense fallback='Loading ...'>
                 <LazyAbout />
               </React.Suspense>
             } />
-            <Route path='product' element={<ProductPage />} >
+            <Route path='product' element={<RequireAuth><ProductPage /></RequireAuth>} >
               <Route index element={<PrimaryPage />} />
               <Route path='primary' element={<PrimaryPage />} />
               <Route path='secondary' element={<SecondaryPage />} />
